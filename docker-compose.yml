@@ -1,0 +1,11 @@
+version: '3'
+services:
+  ml_fast_ai:
+    build:
+      context: .
+    # runtime: nvidia
+    network_mode: host
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./:/data
