@@ -2,7 +2,7 @@ FROM nvidia/cuda:8.0-cudnn7-runtime-ubuntu16.04
 
 # Install Packages
 RUN apt-get update
-RUN apt-get install -y wget bzip2 python2.7
+RUN apt-get install -y wget bzip2 python2.7 build-essential
 
 # Setup environment (copy separately so we can modify separately and use cahced layers
 COPY [ "container-setup/anaconda-install.sh", "/opt/container-setup/anaconda-install.sh" ]
