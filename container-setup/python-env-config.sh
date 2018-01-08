@@ -5,6 +5,7 @@
 echo "[global]
 device = gpu
 floatX = float32
+force_device=True
 [cuda]
 root = /usr/local/cuda" > ~/.theanorc
 

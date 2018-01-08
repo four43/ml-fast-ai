@@ -1,4 +1,4 @@
-FROM nvidia/cuda:8.0-cudnn7-runtime-ubuntu16.04
+FROM nvidia/cuda:8.0-cudnn5-devel-ubuntu16.04
 
 # Install Packages
 RUN apt-get update
@@ -11,7 +11,7 @@ ENV PATH="/root/anaconda2/bin:$PATH"
 
 RUN conda upgrade -y --all
 RUN conda install -y bcolz
-RUN conda install -y theano
+RUN conda install -y theano==0.8.2
 RUN conda install -y keras==1.2.2
 RUN conda install -y jupyter
 
